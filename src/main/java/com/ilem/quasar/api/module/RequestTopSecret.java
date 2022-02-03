@@ -1,17 +1,15 @@
-package com.ilem.quasar.quasarilem.model;
+package com.ilem.quasar.api.module;
 
 import java.util.ArrayList;
 
-public class RequestSatellite {
-
+public class RequestTopSecret {
     private ArrayList<Satellite> satellites;
 
-    public RequestSatellite() {
+    public RequestTopSecret() {
     }
 
-    public RequestSatellite(ArrayList<Satellite> satellites) {
+    public RequestTopSecret(ArrayList<Satellite> satellites) {
         this.satellites = satellites;
-
     }
 
     public ArrayList<Satellite> getSatellites() {

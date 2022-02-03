@@ -1,15 +1,12 @@
-package com.ilem.quasar.quasarilem.model;
+package com.ilem.quasar.api.module;
 
-public class Cordenates {
+public class Position {
     private double x;
     private double y;
 
-    public Cordenates() {
-    }
-
-    public Cordenates(double x, double y) {
-        this.x = x;
-        this.y = y;
+    public Position(double x2, double y2) {
+        this.x = x2;
+        this.y = y2;
     }
 
     public double getX() {
