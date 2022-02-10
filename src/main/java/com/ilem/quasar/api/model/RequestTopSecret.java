@@ -1,4 +1,4 @@
-package com.ilem.quasar.api.module;
+package com.ilem.quasar.api.model;
 
 import java.util.ArrayList;
 
@@ -18,6 +18,11 @@ public class RequestTopSecret {
 
     public void setSatellites(ArrayList<Satellite> satellites) {
         this.satellites = satellites;
+    }
+
+    @Override
+    public String toString() {
+        return "RequestTopSecret [satellites=" + satellites + "]";
     }
 
 }

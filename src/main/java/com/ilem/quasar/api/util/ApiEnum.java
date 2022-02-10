@@ -2,7 +2,12 @@ package com.ilem.quasar.api.util;
 
 public enum ApiEnum {
     RETURNAPI("Gracias por usar este recurso, este endpoint esta en mantenimiento"),
-    ENDPOINT_TOP_SECRET("/topSecret")
+    ENDPOINT_TOP_SECRET("/topSecret"),
+    QUASAR_EXEPTION("NO SE CUENTA CON LA INFORMACION SUFICIENTE"),
+    KENOBI("kenobi"),
+    SATO("sato"),
+    SKYWALKER("skywalker"),
+    RETURN_200("200 ok ; Se Agrego correctamente")
     ;
 
     private String id;
@@ -11,8 +16,8 @@ public enum ApiEnum {
         this.id = id;
     }
 
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
+
 }

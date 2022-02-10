@@ -1,4 +1,4 @@
-package com.ilem.quasar.api.module;
+package com.ilem.quasar.api.model;
 
 import java.util.ArrayList;
 
@@ -53,5 +53,13 @@ public class Satellite {
     public void setPosition(Position position) {
         this.position = position;
     }
+
+    @Override
+    public String toString() {
+        return "Satellite [distance=" + distance + ", message=" + message + ", name=" + name + ", position=" + position
+                + "]";
+    }
+
+    
 
 }

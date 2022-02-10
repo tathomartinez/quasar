@@ -1,4 +1,4 @@
-package com.ilem.quasar.api.module;
+package com.ilem.quasar.api.model;
 
 public class Position {
     private double x;
