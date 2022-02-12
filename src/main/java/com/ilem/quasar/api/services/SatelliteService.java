@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import com.ilem.quasar.api.model.Position;
 import com.ilem.quasar.api.model.RequestTopSecret;
@@ -20,6 +21,7 @@ public class SatelliteService {
     private static Map<String, Satellite> satelitesMap = new HashMap<>();
     private static List<Satellite> satellitesList = Arrays.asList(SatelitesEnum.KENOBY.getSatellite(),
             SatelitesEnum.SKYWALKER.getSatellite(), SatelitesEnum.SATO.getSatellite());
+    private static Optional<Satellite> findFirst;
 
     private SatelliteService() {
         // TODO document why this constructor is empty
@@ -117,11 +119,28 @@ public class SatelliteService {
     }
 
     public static String agregarSatelite(String name, RequestTopSecretSplit requestTopSecretSplit) {
+        if (isValidSatellite(name)) {
+            satelitesMap.put(name,
+                    new Satellite(name, requestTopSecretSplit.getDistance(), requestTopSecretSplit.getMessage()));
 
-        satelitesMap.put(name,
-                new Satellite(name, requestTopSecretSplit.getDistance(), requestTopSecretSplit.getMessage()));
+            return ApiEnum.RETURN_200.getId();
+        }
 
-        return ApiEnum.RETURN_200.getId();
+        return ApiEnum.RETURN_500.getId();
+
+    }
+
+    private static boolean isValidSatellite(String name) {
+        if (name.trim().isEmpty())
+            return false;
+        findFirst = satellitesList.stream()
+            .filter(
+                s -> s.getName()
+                    .toLowerCase()
+                    .equals(name.trim().toLowerCase())
+            )
+            .findFirst();
+        return !findFirst.isEmpty();
     }
 
     public static void reset() {
