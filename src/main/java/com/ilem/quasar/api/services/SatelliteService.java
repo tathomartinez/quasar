@@ -113,7 +113,7 @@ public class SatelliteService {
     }
 
     private static boolean isDataEnougth(ArrayList<Satellite> satellites) {
-        return satellites.size() != 3;
+        return satellites.size() == 3;
     }
 
     public static String agregarSatelite(String name, RequestTopSecretSplit requestTopSecretSplit) {
