@@ -6,9 +6,9 @@ import org.springframework.test.context.ContextConfiguration;
 
 // @SpringBootTest
 
-@SpringBootTest(classes = ApiIlemApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// @SpringBootTest(classes = ApiIlemApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 
-@ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/spring-config.xml") 
+// @ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/spring-config.xml") 
 class ApiIlemApplicationTests {
 
 	// @Test
