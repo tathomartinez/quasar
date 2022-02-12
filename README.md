@@ -1,4 +1,4 @@
-## Bien venidos al api quasar
+## Bienvenidos - api quasar
 Nombre clave patitoDeHule
 ** instalacion
 revisar instalacion de java (usar java version)
