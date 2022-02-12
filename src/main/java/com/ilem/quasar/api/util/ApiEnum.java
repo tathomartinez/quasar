@@ -7,7 +7,8 @@ public enum ApiEnum {
     KENOBI("kenobi"),
     SATO("sato"),
     SKYWALKER("skywalker"),
-    RETURN_200("200 ok ; Se Agrego correctamente")
+    RETURN_200("200 ok ; Se Agrego correctamente"),
+    RETURN_500("500 error ; No valido"),
     ;
 
     private String id;
